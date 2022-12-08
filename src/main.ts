@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from "electron";
 import {createMainWindow} from "./utils/createMainWindow";
+import {TitleBar} from "./event/titlebarAction";
 
 class App {
   private mainWindow: Electron.CrossProcessExports.BrowserWindow;
@@ -8,8 +9,7 @@ class App {
   }
 
   listeners() {
-    // new Default(this.mainWindow, app);
-    // new TitleBar(this.mainWindow);
+    new TitleBar(this.mainWindow);
   }
 
   init() {

@@ -3,11 +3,11 @@ import * as path from "path";
 
 export async function createMainWindow() {
     let window = createWindow({
-        minWidth: 165,
-        width: 800,
+        minWidth: 500,
+        width: 900,
 
-        height: 600,
-        minHeight: 200,
+        height: 450,
+        minHeight: 450,
 
         autoHideMenuBar: true,
         frame: false,

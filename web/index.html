@@ -11,22 +11,48 @@
         <header>
             <h1>LockIt</h1>
             <div class="action-button">
-                <a id="minimize">_</a>
-                <a id="maximize">[]</a>
+                <a id="reduce">_</a>
+                <a id="minmaximize">[]</a>
                 <a id="close">X</a>
             </div>
         </header>
         <div class="app">
             <div class="app-content">
-                <p class="title">Résistez aux piratages grâce au générateur de mots de passe de Dashlane</p>
+                <p class="title">Résistez aux piratages grâce au générateur de mots de passe</p>
                 <div class="password">
-                    <p>rygtvbh</p>
-                    <a id="refresh">refresh</a>
+                    <p id="generated_password"></p>
+                    <a id="regenerate">Regenerate</a>
                 </div>
                 <div class="copy-password">
-                    <a>Copy password</a>
+                    <a id="copy_password">Copy password</a>
+                </div>
+                <div class="select-range">
+                    <label id="length_text" for="length"></label>
+                    <input type="range" id="length" min="8" max="50" value="20" step="1">
+                </div>
+                <div class="select-char">
+                    <div>
+                        <input id="letter" type="checkbox" checked>
+                        <label for="letter">Lettres (A-z)</label>
+                    </div>
+                    <div>
+                        <input id="number" type="checkbox" checked>
+                        <label for="number">Chiffres (0-9)</label>
+                    </div>
+                    <div>
+                        <input id="special" type="checkbox" checked>
+                        <label for="special">Symboles (@-#)</label>
+                    </div>
                 </div>
             </div>
         </div>
     </body>
+
+    <script src="js/titlebarAction.js"></script>
+    <script src="js/passwordChar.js"></script>
+    <script src="js/checkboxGestion.js"></script>
+    <script src="js/copyPassword.js"></script>
+    <script src="js/generatePassword.js"></script>
+    <script src="js/generateEvent.js"></script>
+
 </html>

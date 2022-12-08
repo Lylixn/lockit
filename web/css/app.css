@@ -13,15 +13,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    overflow-y: scroll;
 }
 
 .app-content {
     width: 95%;
-}
-
-.app-content > * {
-    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .title {
@@ -37,10 +35,29 @@ body {
     height: 40px;
     line-height: 40px;
     font-size: 20px;
+    transition: border-bottom-color 200ms ease-in-out;
+}
+
+.password:hover {
+    border-bottom: 4px solid rgb(13,17,23);
 }
 
 .password > * {
     margin: 0 10px;
+    user-select: all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.password > a {
+    user-select: none;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.password > *:hover {
+    transform: scale(1.04);
 }
 
 .copy-password {
@@ -64,4 +81,25 @@ body {
 .copy-password > a:hover {
     background-color: rgb(13,17,23);
     color: white;
+}
+
+.select-range > input[type='range'] {
+    -webkit-appearance: none !important;
+    background: white;
+    width: 100%;
+    height:7px;
+    cursor: pointer;
+}
+.select-range > input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: rgb(13,17,23);
+    border-radius: 15px;
+    height: 30px;
+    width: 30px;
+}
+
+.select-char {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
