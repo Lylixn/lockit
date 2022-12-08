@@ -10,21 +10,9 @@ special.addEventListener("change", function() {
 
 function checkboxGestion() {
     // Number
-    if (!(letter.checked || special.checked)) {
-        number.disabled = true;
-    } else {
-        number.disabled = false;
-    }
+    number.disabled = !(letter.checked || special.checked);
     // Letter
-    if (!(number.checked || special.checked)) {
-        letter.disabled = true;
-    } else {
-        letter.disabled = false;
-    }
+    letter.disabled = !(number.checked || special.checked);
     // Special
-    if (!(letter.checked || number.checked)) {
-        special.disabled = true;
-    } else {
-        special.disabled = false;
-    }
+    special.disabled = !(letter.checked || number.checked);
 }
