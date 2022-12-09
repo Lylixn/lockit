@@ -7,7 +7,15 @@
 
 ![image](https://user-images.githubusercontent.com/46485459/206547908-a472b81c-585a-427f-a354-cf85007571e4.png)
 
-## LockIt is a password generator inspired by dashlane.
+## Summary
+
+- ### [LockIt](#LockIt)
+- ### [Installation](#installation)
+- ### [Development](#development)
+
+## LockIt
+
+- ### LockIt is a password generator inspired by dashlane.
 
 - It integrates a secure generator with a random generation and has a verification of the strength of your password.
 - It is made in HTML/CSS/JS and is embed a window in electron, the interface is simple, efficient and modern.
