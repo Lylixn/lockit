@@ -48,12 +48,12 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    transition: transform 200ms ease-in-out;
 }
 
 .password > a {
     user-select: none;
     cursor: pointer;
-    transition: transform 200ms ease-in-out;
 }
 
 .password > *:hover {

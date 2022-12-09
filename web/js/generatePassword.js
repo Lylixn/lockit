@@ -1,3 +1,5 @@
+const crypto = require("crypto");
+
 function generatePassword() {
 
     let passwordText = "";
@@ -5,7 +7,8 @@ function generatePassword() {
     let length = document.getElementById("length");
 
     for (let i = 0; i <= length.value - 1; i++) {
-        var char = Math.floor(Math.random() * getValableChar().length);
+        // let char = Math.floor(Math.random() * getValableChar().length);
+        let char = crypto.randomInt(0, getValableChar().length - 1);
 
         passwordText += getValableChar().charAt(char);
     }
