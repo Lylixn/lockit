@@ -18,11 +18,8 @@ export async function createMainWindow() {
         },
     });
 
-    let paths = path.join(__dirname, `../../web/index.html`)
-    console.log(paths)
-
     return await window
-        .loadFile(paths)
+        .loadFile(path.join(__dirname, `../../web/index.html`))
         .then(() => {
             console.log("index.html loaded");
             return window;

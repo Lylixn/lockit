@@ -7,9 +7,10 @@ function generatePassword() {
     for (let i = 0; i <= length.value - 1; i++) {
         var char = Math.floor(Math.random() * getValableChar().length);
 
-        passwordText += getValableChar().charAt(char)
+        passwordText += getValableChar().charAt(char);
     }
 
+    checkStrength(passwordText);
     password.innerText = passwordText;
 
 }
