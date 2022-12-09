@@ -9,11 +9,11 @@
 
 ## Summary
 
-- ### [LockIt](#Lock-It)
-- ### [Installation](#installation)
-- ### [Development](#development)
+- ### [LockIt Description](#LockIt)
+- ### [Installation Instruction](#installation)
+- ### [Development requirement](#development)
 
-## Lock It
+## LockIt
 
 - ### LockIt is a password generator inspired by dashlane.
 
