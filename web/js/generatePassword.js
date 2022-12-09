@@ -7,22 +7,9 @@ function generatePassword() {
     let length = document.getElementById("length");
 
     for (let i = 0; i <= length.value - 1; i++) {
-        let typeChar = getValableChar();
-        let aleatoryType = typeChar[crypto.randomInt(0, typeChar.length)];
-        switch (aleatoryType) {
-            case "number":
-                let pos1 = crypto.randomInt(1, Character.number.length - 1);
-                passwordText += Character.number.charAt(pos1);
-                break;
-            case "letter":
-                let pos2 = crypto.randomInt(1, Character.letter.length - 1);
-                passwordText += Character.letter.charAt(pos2);
-                break;
-            case "special":
-                let pos3 = crypto.randomInt(1, Character.special.length - 1);
-                passwordText += Character.special.charAt(pos3);
-                break;
-        }
+        let chars = getValableChar();
+        let pos = crypto.randomInt(0, chars.length - 1);
+        passwordText += chars.charAt(pos);
     }
 
     checkStrength(passwordText);
@@ -32,16 +19,16 @@ function generatePassword() {
 
 function getValableChar() {
 
-    let chars = []
+    let chars = ""
 
     if (number.checked) {
-        chars.push("number")
+        chars += Character.number
     }
     if (letter.checked) {
-        chars.push("letter")
+        chars += Character.letter
     }
     if (special.checked) {
-        chars.push("special")
+        chars += Character.special
     }
 
     return chars;
