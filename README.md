@@ -18,10 +18,22 @@
 ### To install LockIt you need to download the release file here and start the installation:
 
 * #### Linux :
-    * ##### Pacman : `sudo pacman -U lockit-1.0.0-1-x86_64.pkg.tar.zst`
-    * ##### Snapd : `sudo snap install lockit_1.0.0_amd64.snap --dangerous`
-    * ##### AppImage : `chmod +x lockit-1.0.0-x86_64.AppImage && ./lockit-1.0.0-x86_64.AppImage`
-* #### Windows : `Click on the installer file and follow the instructions`
+    * ##### Pacman :
+        ```
+        sudo pacman -U lockit-1.0.0-1-x86_64.pkg.tar.zst
+        ```
+    * ##### Snapd :
+        ```
+        sudo snap install lockit_1.0.0_amd64.snap --dangerous
+        ```
+    * ##### AppImage : 
+        ```
+        chmod +x lockit-1.0.0-x86_64.AppImage && ./lockit-1.0.0-x86_64.AppImage
+        ```
+* #### Windows : 
+    ```
+    Click on the installer file and follow the instructions
+    ```
 
 ## Development
 
@@ -33,5 +45,6 @@
 
 ```shell
 npm run build    # build typescript to dist
+npm run start    # start app for development
 npm run dist    # compile and bundle the app to installer
 ```
