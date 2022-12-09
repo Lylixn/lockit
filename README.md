@@ -39,7 +39,9 @@
 
 #### Bug reports and pull requests welcome!
 
-`git clone https://github.com/dropbox/zxcvbn.git`
+```
+git clone https://github.com/dropbox/zxcvbn.git
+```
 
 - LockIt is built with Typescript, and Electron. All the source files is in src and web, they will be compiled and bundled in the dist folder.
 
