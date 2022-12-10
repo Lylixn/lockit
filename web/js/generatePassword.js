@@ -6,10 +6,11 @@ function generatePassword() {
     let password = document.getElementById("generated_password");
     let length = document.getElementById("length");
 
-    for (let i = 0; i <= length.value - 1; i++) {
-        let chars = getValableChar();
+    const chars = getValableChar();
+
+    for (let i = 0; i < length.value; i++) {
         let pos = crypto.randomInt(0, chars.length - 1);
-        passwordText += chars.charAt(pos);
+        passwordText += chars[pos];
     }
 
     checkStrength(passwordText);
