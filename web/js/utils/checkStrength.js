@@ -1,6 +1,6 @@
 const zxcvbn = require('zxcvbn')
 
-function checkStrength(password) {
+export function checkStrength(password) {
     let strength = zxcvbn(password)
 
     if (strength.score === 0) {
