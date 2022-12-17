@@ -2,13 +2,25 @@
   "name": "lockit",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main.js",
+  "main": "js/main.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "npm run build && electron ./dist/main.js",
-    "dist": "npx electron-packager . lockit"
+    "start": "npm run build && electron ./js/main.js",
+    "package": "npx electron-packager . lockit",
+    "pack": "electron-builder --dir",
+    "dist": "npm run build && electron-builder"
+  },
+  "build": {
+    "appId": "fr.lylixn.lockit",
+    "win": {
+      "target": ["msi", "nsis"],
+      "icon": "icon.png"
+    },
+    "mac": {
+      "icon": "icon.png"
+    }
   },
   "keywords": [],
   "author": "Lylixn",
