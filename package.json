@@ -17,9 +17,6 @@
     "win": {
       "target": ["msi", "nsis"],
       "icon": "icon.png"
-    },
-    "mac": {
-      "icon": "icon.png"
     }
   },
   "keywords": [],
